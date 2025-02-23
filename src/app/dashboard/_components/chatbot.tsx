@@ -15,6 +15,7 @@ export function ChatBot() {
   ]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [conversation, setConversation] = useState('');
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -36,14 +37,16 @@ export function ChatBot() {
 
     try {
       const response = await axios.post(
-        'https://knai-api.1s8eitm7mefn.us-east.codeengine.appdomain.cloud/natural_query',
-        { query: inputText }
+        'https://knai-backend.1s8eitm7mefn.us-east.codeengine.appdomain.cloud/natural_query',
+        { query: inputText, conversation }
       );
       console.log(inputText);
       setMessages(prev => [
         ...prev,
         { text: response.data.response.final_answer, isUser: false },
       ]);
+      setConversation(response.data.response.conversation_id);
+      console.log(conversation);
       console.log(response);
     } catch (error) {
       console.error('Error sending message:', error);
