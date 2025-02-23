@@ -1,4 +1,4 @@
-# KNAI Analyst Intelligence (Frontend)
+# KNAI Analyst Intelligence
 
 ## Overview
 KNAI Analyst Intelligence automates the creation and execution of complex queries on structured databases, enabling businesses to gain insights quickly without requiring advanced technical knowledge. Our solution optimizes time, reduces errors, and ensures more accurate financial forecasts.
