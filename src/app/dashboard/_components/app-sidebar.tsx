@@ -17,7 +17,7 @@ import {
 import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { History, Database, LayoutDashboard, Bot } from 'lucide-react';
+import { Database, Bot } from 'lucide-react';
 import Link from 'next/link';
 
 type NavItem = {
@@ -38,19 +38,9 @@ const data = {
           icon: <Bot className="w-4 h-4" />,
         },
         {
-          title: 'History',
-          url: '#history',
-          icon: <History className="w-4 h-4" />,
-        },
-        {
           title: 'Connected Bases',
           url: '#Connected Bases',
           icon: <Database className="w-4 h-4" />,
-        },
-        {
-          title: 'Dashboards',
-          url: '#Dashboards',
-          icon: <LayoutDashboard className="w-4 h-4" />,
         },
       ],
     },
