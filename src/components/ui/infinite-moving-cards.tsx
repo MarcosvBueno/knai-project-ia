@@ -112,10 +112,10 @@ export const InfiniteMovingCards = ({
                 <div className="mb-4">
                   <Avatar className="w-14 h-14">
                     <AvatarImage src={item.imageUrl} />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarFallback>{item.name.charAt(0)}</AvatarFallback>{' '}
                   </Avatar>
                 </div>
-                {/* Nome e cargo */}
+
                 <span className="text-base leading-[1.6] text-gray-600 font-semibold">
                   {item.name}
                 </span>
