@@ -77,7 +77,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        'scroller relative  w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+        'scroller relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className
       )}
     >
@@ -91,11 +91,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[450px] max-w-full relative rounded-2xl border flex-shrink-0 border-cyan-700 px-8 py-6 md:w-[550px] h-[280px] md:h-[350px] flex flex-col items-center justify-center"
-            style={{
-              background:
-                'linear-gradient(180deg, var(--slate-800), var(--slate-900))',
-            }}
+            className="w-[450px] max-w-full relative rounded-2xl border flex-shrink-0 border-cyan-700 bg-gradient-to-b from-gray-50-800 to-gray-100 px-8 py-6 md:w-[550px] h-[280px] md:h-[350px] flex flex-col items-center justify-center"
             key={item.name}
           >
             <blockquote className="flex flex-col items-start text-center">
@@ -104,7 +100,7 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
 
-              <div className="flex justify-center items-start ">
+              <div className="flex justify-center items-start">
                 <span className="text-xs md:text-sm leading-[1.6] text-black font-normal mb-6">
                   <Quote className="h-5 w-5" />
                   {item.quote}
@@ -120,7 +116,7 @@ export const InfiniteMovingCards = ({
                   </Avatar>
                 </div>
                 {/* Nome e cargo */}
-                <span className="text-base leading-[1.6] text-black font-semibold">
+                <span className="text-base leading-[1.6] text-gray-600 font-semibold">
                   {item.name}
                 </span>
 

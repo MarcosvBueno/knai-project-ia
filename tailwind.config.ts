@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-require-imports */
-import { Config } from 'tailwind-merge';
+import { Config } from 'tailwindcss'; // Importe a tipagem correta do Tailwind CSS
 
 const {
   default: flattenColorPalette,
@@ -18,8 +18,7 @@ function addVariablesForColors({ addBase, theme }: any) {
 }
 
 /** @type {import('tailwindcss').Config} */
-
-export default {
+const config: Config = {
   darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -97,6 +96,8 @@ export default {
         },
       },
     },
-    plugins: [require('tailwindcss-animate'), 'addVariablesForColors'],
   },
-} satisfies Config;
+  plugins: [require('tailwindcss-animate'), addVariablesForColors],
+};
+
+export default config;
