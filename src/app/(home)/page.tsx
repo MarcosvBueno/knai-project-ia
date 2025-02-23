@@ -4,6 +4,12 @@ import Hero from '../_components/hero';
 import WorkPage from '../_components/work';
 import CommentsSection from '../_components/comments';
 import Footer from '../_components/footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'KNAI Home',
+  description: 'home page of Knai Artificial Intelligence',
+};
 
 export default function Home() {
   return (
